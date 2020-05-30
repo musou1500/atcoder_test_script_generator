@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "AtCoder Test Script Generator",
+  "version": "1.0",
+  "description": "",
+  "permissions": ["activeTab", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistrent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://atcoder.jp/contests/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "browser_action": {
+    "name": "copy test script"
+  }
+}
